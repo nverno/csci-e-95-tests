@@ -102,6 +102,6 @@ Dir["#{options[:dir]}/*.c"].each do |test|
 end
 
 puts "Total saved: #{count}"
-puts "Logged in #{saved.path}"
+puts "#{File.absolute_path(saved.path)}"
 
 saved.close
