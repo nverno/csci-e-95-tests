@@ -82,13 +82,16 @@ end
 
 count = 0
 
-Dir["#{options[:dir]}/*.c"].sort.each do |test|
+files = Dir["#{options[:dir]}/*.c"].sort
+
+files.each_with_index do |test, idx|
   code    = File.read(test)
   output  = `#{options[:compiler]} -s #{options[:stage]} #{test}`
   results = result(test, code, output)
 
   if(options[:prompt])
     STDOUT << results
+    puts "You are on #{idx + 1}/#{files.size}"
     puts "Save this test?"
     if $stdin.gets == "y\n"
       saved.write(results)
