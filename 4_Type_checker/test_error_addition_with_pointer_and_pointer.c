@@ -1,1 +1,1 @@
-void main(void) { int *a, *b; int c; c = a + b; }
+void main(void) { int *a, *b; a + b; }
