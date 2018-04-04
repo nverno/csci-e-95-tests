@@ -83,6 +83,16 @@ end
 count = 0
 
 files = Dir["#{options[:dir]}/*.c"].sort
+count = files.size
+
+encouraging_messages = [
+  'You can do it!',
+  'Almost there!',
+  'You\'re doing a great job',
+  'Don\'t give up!',
+  'Keep it up!',
+  'Great work'
+]
 
 files.each_with_index do |test, idx|
   code    = File.read(test)
@@ -91,7 +101,13 @@ files.each_with_index do |test, idx|
 
   if(options[:prompt])
     STDOUT << results
-    puts "You are on #{idx + 1}/#{files.size}"
+
+    puts "You are on #{idx + 1}/#{count}"
+
+    if rand(count) < count/10
+      puts encouraging_messages.sample
+    end
+
     puts "Save this test?"
     if $stdin.gets == "y\n"
       saved.write(results)
