@@ -82,7 +82,7 @@ end
 
 count = 0
 
-Dir["#{options[:dir]}/*.c"].each do |test|
+Dir["#{options[:dir]}/*.c"].sort.each do |test|
   code    = File.read(test)
   output  = `#{options[:compiler]} -s #{options[:stage]} #{test}`
   results = result(test, code, output)
