@@ -52,6 +52,10 @@ OptionParser.new do |opts|
   opts.on("-p", "--prompt", "Whether to prompt to save tests") do |p|
     options[:prompt] = p
   end
+
+    opts.on("-r" "--regex", "Pattern to match tests to run") do |r|
+    options[:regex] = r || ""
+  end
 end.parse!
 
 if options[:compiler].nil? || !File.exist?(options[:compiler])
@@ -82,7 +86,7 @@ end
 
 count = 0
 
-files = Dir["#{options[:dir]}/*.c"].sort
+files = Dir["#{options[:dir]}/*#{options[:regex]}*.c"].sort
 count = files.size
 
 encouraging_messages = [
