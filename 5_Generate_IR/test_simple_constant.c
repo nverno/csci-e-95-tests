@@ -1,1 +1,1 @@
-int fn(void) { 1; }
+void fn(void) { 1; }
