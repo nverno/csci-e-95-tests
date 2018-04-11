@@ -86,7 +86,9 @@ end
 
 count = 0
 
-files = Dir["#{options[:dir]}/*#{options[:regex]}*.c"].sort
+files = Dir["#{options[:dir]}/*.c"].sort
+files = files.select { |f| f =~ /#{options[:regex]}/ } if options[:regex]
+
 count = files.size
 
 encouraging_messages = [
