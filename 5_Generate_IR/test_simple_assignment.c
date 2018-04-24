@@ -1,1 +1,1 @@
-void fn(int a) { a = 1; }
+int a; void fn(int b) { a = b; }
