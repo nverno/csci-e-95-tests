@@ -111,7 +111,7 @@ files.each_with_index do |test, idx|
     puts "You are on #{idx + 1}/#{count}"
 
     if rand(count) < count/10
-      puts encouraging_messages.choice
+      puts encouraging_messages.respond_to?(:choice) ? encouraging_messages.choice : encouraging_messages.sample
     end
 
     puts "Save this test?"
