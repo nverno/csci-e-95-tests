@@ -1,4 +1,3 @@
-
 int a;
 short b;
 short int c;
@@ -26,9 +25,9 @@ unsigned char s;
 int funcDeclar(int crap, int crap1); 
 int printf(char *c, int i)
 {
-  int a, b;
-  funcDeclar(a, b);
-  return 1;
+    int a, b;
+    funcDeclar(a, b);
+    return 1;
 }
 
 
@@ -53,7 +52,7 @@ int main( int p1, char **p2 )
         s2_a = 0;
         s2_b = 0;
         while(1)
-	  {
+        {
             char* p_s3_a;
             p_s3_a = &s2_b;
             *p_s3_a = s1_b;
@@ -72,12 +71,12 @@ int main( int p1, char **p2 )
                 }
             }
             break;
-	  }
+        }
 
 	{ 
-	  int s3_a;
+            int s3_a;
             for( ; ; )
-	      {
+            {
                 unsigned char s4_a;
                 s4_a = 0;
                 s4_a++;
@@ -86,12 +85,12 @@ int main( int p1, char **p2 )
                     s4_a = 15;
                 }
                 break;
-	      }
+            }
             
             for( s3_a = 0; s3_a < 5; s3_a ++ )
-	      {
+            {
                 printf("%d, for loop\n", s3_a);
-	      }
+            }
         }
     }
     s1_test1 = s1_test2 / s1_a;
@@ -108,9 +107,9 @@ int foo( int foo_p1, int foo_p2 )
     foo_a = foo_b + foo_p1 + foo_p2;
     x=1;
     do
-      {
+    {
         x = 5;
-      } while(0);
+    } while(0);
     return x;
     func(x);
 }
@@ -124,8 +123,8 @@ void void_foo( void )
     foo_b = 1;
     x = 8;
     if( foo_a < foo_b )
-      {
-      }
+    {
+    }
     
     func(x);
 }
@@ -139,17 +138,17 @@ void void_foo_2(short s1, short s2)
     foo_b = s2;
     x = 8;
     if( foo_a < foo_b )
-      {
-      }
+    {
+    }
     else
-      {
+    {
         char x;
         x = s1 + s1;
-      }
+    }
     func(x);
 }
 
-int void_foo_3()
+int void_foo_3(void)
 {
     int foo_a;
     int foo_b;
@@ -191,7 +190,7 @@ short* p_void_foo_5( int* foo_p1 )
 
 int funcDeclar(int a, int b)
 {
-   return a + b;
+    return a + b;
 }
 
 long * p_func (long var);
