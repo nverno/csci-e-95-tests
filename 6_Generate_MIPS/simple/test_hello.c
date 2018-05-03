@@ -8,6 +8,12 @@ char *str;
 int arr[100];
 
 int main(int argc, char *argv[]) {
+    char arr2[1];
+    char *arr3;
+    short s;
+    long l;
+    int i;
+    
     str = "hello\n";
     syscall_print_string(str);
 
