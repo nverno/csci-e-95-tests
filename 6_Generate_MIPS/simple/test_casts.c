@@ -2,11 +2,11 @@ void syscall_print_int(int integer);
 short x;
 
 int main(int argc, char *argv[]) {
-    int y;
-    unsigned long z;
-    char c;
-    
-    z = x + y;
+    long y;
+    signed char c;
+    x = 255;
+    c = x;
+    syscall_print_int(c);
     
     return 0;
 }

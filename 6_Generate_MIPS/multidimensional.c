@@ -9,9 +9,9 @@ int l, j, k;
 short i[10][10];
 
 int main(int argc, char *argv) {
-  i[5][5] = -19;
+    i[5][5] = -19;
 
-  syscall_print_string("i[5][5] = ");
-  syscall_print_int(i[5][5]);
-  syscall_print_string("\n");
+    syscall_print_string("i[5][5] = ");
+    syscall_print_int(i[5][5]);
+    syscall_print_string("\n");
 }

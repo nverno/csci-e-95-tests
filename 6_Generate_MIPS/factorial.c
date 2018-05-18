@@ -12,40 +12,40 @@ char *strcpy(char *dest, char *src);
 int factorial(int n);
 
 int main(void) {
-  char prompt[80];
-  int n, f;
+    char prompt[80];
+    int n, f;
 
-  strcpy(prompt, "Factorial of ");
-  syscall_print_string(prompt);
+    strcpy(prompt, "Factorial of ");
+    syscall_print_string(prompt);
 
-  n = syscall_read_int();
+    n = syscall_read_int();
 
-  strcpy(prompt, " equals ");
-  syscall_print_string(prompt);
+    strcpy(prompt, " equals ");
+    syscall_print_string(prompt);
 
-  f = factorial(n);
+    f = factorial(n);
 
-  syscall_print_int(f);
+    syscall_print_int(f);
 
-  strcpy(prompt, "\n");
-  syscall_print_string(prompt);
+    strcpy(prompt, "\n");
+    syscall_print_string(prompt);
 
-  return 0;
+    return 0;
 }
 
 char *strcpy(char *dest, char *src) {
-  char *initial_dest;
+    char *initial_dest;
 
-  initial_dest = dest;
-  do {
-    *dest++ = *src;
-  } while (*src++);
-  return initial_dest;
+    initial_dest = dest;
+    do {
+        *dest++ = *src;
+    } while (*src++);
+    return initial_dest;
 }
 
 int factorial(int n) {
-  if (n <= 1)
-    return 1;
-  else
-    return n * factorial(n - 1);
+    if (n <= 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
 }

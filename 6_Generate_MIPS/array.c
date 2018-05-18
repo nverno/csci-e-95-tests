@@ -13,4 +13,5 @@ int main(int argc, char *argv) {
   syscall_print_string("i[5] = ");
   syscall_print_int(i[5]);
   syscall_print_string("\n");
+  return 0;
 }
